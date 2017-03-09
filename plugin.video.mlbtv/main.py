@@ -26,7 +26,7 @@ def todaysGames(game_day):
     
     #addPlaylist(date_display,display_day,'/playhighlights',999,ICON,FANART)
 
-    url = 'http://gdx.mlb.com/components/game/mlb/'+url_game_day+'/grid_ce.json'    
+    url = 'http://gdx.mlb.com/components/game/mlb/'+url_game_day+'/grid.json'    
 
     req = urllib2.Request(url)    
     req.add_header('Connection', 'close')
@@ -201,7 +201,7 @@ def createGameListItem(game, game_day):
 def streamSelect(event_id, gid, teams_stream, stream_date):    
     display_day = stringToDate(stream_date, "%Y-%m-%d")
     url_game_day = display_day.strftime('year_%Y/month_%m/day_%d')
-    url = 'http://gdx.mlb.com/components/game/mlb/'+url_game_day+'/grid_ce.json'    
+    url = 'http://gdx.mlb.com/components/game/mlb/'+url_game_day+'/grid.json'    
     
     req = urllib2.Request(url)    
     req.add_header('Connection', 'close')
